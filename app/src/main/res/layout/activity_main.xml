@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".MainActivity"
+        android:id="@+id/container">
+
+    <!--   <ru.nordbird.avatarimageview.ui.AvatarImageViewMask
+               android:layout_width="120dp"
+               android:layout_height="120dp"
+               android:src="@drawable/ava_big"
+               app:aivm_borderColor="@color/colorAccent"
+               app:aivm_borderWidth="10dp"/>
+
+       <ru.nordbird.avatarimageview.ui.AvatarImageViewShader
+               android:layout_width="120dp"
+               android:layout_height="120dp"
+               android:src="@drawable/ava_big"/>
+-->
+    <ru.nordbird.avatarimageview.ui.AvatarImageView
+            android:id="@+id/aiv_avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ava_big"
+            app:aiv_initials="AN"/>
+
+    <Button
+            android:id="@+id/btn_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COLOR"/>
+
+    <Button
+            android:id="@+id/btn_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BORDER"/>
+
+</LinearLayout>
