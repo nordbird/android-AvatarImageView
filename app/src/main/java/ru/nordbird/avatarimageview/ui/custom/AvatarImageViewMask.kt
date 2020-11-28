@@ -1,4 +1,4 @@
-package ru.nordbird.avatarimageview.ui
+package ru.nordbird.avatarimageview.ui.custom
 
 import android.content.Context
 import android.graphics.*
@@ -44,7 +44,9 @@ class AvatarImageViewMask @JvmOverloads constructor(
             val ta = context.obtainStyledAttributes(attrs, R.styleable.AvatarImageViewMask)
             borderWidth =
                 ta.getDimension(R.styleable.AvatarImageViewMask_aivm_borderWidth, context.dpToPx(DEFAULT_BORDER_WIDTH))
-            borderColor = ta.getColor(R.styleable.AvatarImageViewMask_aivm_borderColor, DEFAULT_BORDER_COLOR)
+            borderColor = ta.getColor(R.styleable.AvatarImageViewMask_aivm_borderColor,
+                DEFAULT_BORDER_COLOR
+            )
             initials = ta.getString(R.styleable.AvatarImageViewMask_aivm_initials) ?: "??"
             ta.recycle()
         }

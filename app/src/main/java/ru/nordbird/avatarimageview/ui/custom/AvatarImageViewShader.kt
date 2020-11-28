@@ -1,4 +1,4 @@
-package ru.nordbird.avatarimageview.ui
+package ru.nordbird.avatarimageview.ui.custom
 
 import android.content.Context
 import android.graphics.*
@@ -44,7 +44,9 @@ class AvatarImageViewShader @JvmOverloads constructor(
                     R.styleable.AvatarImageViewShader_aivs_borderWidth,
                     context.dpToPx(DEFAULT_BORDER_WIDTH)
                 )
-            borderColor = ta.getColor(R.styleable.AvatarImageViewShader_aivs_borderColor, DEFAULT_BORDER_COLOR)
+            borderColor = ta.getColor(R.styleable.AvatarImageViewShader_aivs_borderColor,
+                DEFAULT_BORDER_COLOR
+            )
             initials = ta.getString(R.styleable.AvatarImageViewShader_aivs_initials) ?: "??"
             ta.recycle()
         }

@@ -1,4 +1,4 @@
-package ru.nordbird.avatarimageview.ui
+package ru.nordbird.avatarimageview.ui.custom
 
 import android.animation.ValueAnimator
 import android.content.Context
@@ -66,7 +66,10 @@ class AvatarImageView @JvmOverloads constructor(
             val ta = context.obtainStyledAttributes(attrs, R.styleable.AvatarImageView)
             borderWidth =
                 ta.getDimension(R.styleable.AvatarImageView_aiv_borderWidth, context.dpToPx(DEFAULT_BORDER_WIDTH))
-            borderColor = ta.getColor(R.styleable.AvatarImageView_aiv_borderColor, DEFAULT_BORDER_COLOR)
+            borderColor = ta.getColor(
+                R.styleable.AvatarImageView_aiv_borderColor,
+                DEFAULT_BORDER_COLOR
+            )
             initials = ta.getString(R.styleable.AvatarImageView_aiv_initials) ?: "??"
             ta.recycle()
         }
@@ -270,7 +273,6 @@ class AvatarImageView @JvmOverloads constructor(
         va.doOnRepeat { toggleMode() }
         va.start()
 
-
         return true
     }
 
@@ -303,8 +305,8 @@ class AvatarImageView @JvmOverloads constructor(
         override fun describeContents() = 0
 
         companion object CREATOR : Parcelable.Creator<SavedSate> {
-            override fun createFromParcel(parcel: Parcel) = SavedSate(parcel)
-
+            override fun createFromParcel(parcel: Parcel) =
+                SavedSate(parcel)
 
             override fun newArray(size: Int): Array<SavedSate?> = arrayOfNulls(size)
         }

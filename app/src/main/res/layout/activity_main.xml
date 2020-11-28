@@ -10,19 +10,7 @@
         tools:context=".MainActivity"
         android:id="@+id/container">
 
-    <!--   <ru.nordbird.avatarimageview.ui.AvatarImageViewMask
-               android:layout_width="120dp"
-               android:layout_height="120dp"
-               android:src="@drawable/ava_big"
-               app:aivm_borderColor="@color/colorAccent"
-               app:aivm_borderWidth="10dp"/>
-
-       <ru.nordbird.avatarimageview.ui.AvatarImageViewShader
-               android:layout_width="120dp"
-               android:layout_height="120dp"
-               android:src="@drawable/ava_big"/>
--->
-    <ru.nordbird.avatarimageview.ui.AvatarImageView
+    <ru.nordbird.avatarimageview.ui.custom.AvatarImageView
             android:id="@+id/aiv_avatar"
             android:layout_width="120dp"
             android:layout_height="120dp"
