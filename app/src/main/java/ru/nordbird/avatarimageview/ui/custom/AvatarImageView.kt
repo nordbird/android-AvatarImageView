@@ -250,6 +250,8 @@ class AvatarImageView @JvmOverloads constructor(
     }
 
     private fun initialsToColor(letters: String): Int {
+        if (letters.isEmpty()) return bgColors[0]
+        
         val b = letters[0].toByte()
         val len = bgColors.size
         val d = b / len.toDouble()
